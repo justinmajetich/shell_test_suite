@@ -32,6 +32,8 @@ echo
 echo "==========[hsh]========="
 echo "mkdir test_dir" | ./hsh
 echo
+echo "ls" | sh
+echo
 echo --------------------------------------------
 echo "TEST: touch file_name"
 echo "==========[sh]=========="
@@ -39,6 +41,8 @@ echo "touch file_name" | sh
 echo
 echo "==========[hsh]========="
 echo "touch file_name" | ./hsh
+echo
+echo "ls" | sh
 echo
 echo --------------------------------------------
 echo "TEST: cp file_name FILE_NAME"
@@ -49,10 +53,17 @@ echo "==========[hsh]========="
 echo "cp file_name FILE_NAME" | ./hsh
 echo
 echo
+echo "ls" | sh
+echo
+
+echo
 echo --------------------------------------------
-echo rm file_name
-echo rm FILE_NAME
-echo rm -r test_dir
+echo "rm file_name" | sh
+echo "rm FILE_NAME" | sh
+echo "rm -r test_dir" | sh
+echo
+echo "ls" | sh
+echo
 echo "--------------------------------------------"
 echo "--------------- END OF TEST ----------------"
 echo "--------------------------------------------"
