@@ -1,6 +1,8 @@
 # Shell Test Suite #
 This test suite was created and maintained jointly by Holberton Cohort 10 students in New Haven.  The tests contained here are for every expected and edged cases.  
 
+Refer to test files for formatting template.
+
 ## Testing ##
 1. Write a UNIX command line interpreter.  
 2. Write a custom getline function.  
