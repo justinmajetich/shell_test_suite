@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# Use these templates to format your test file.
+# Your shell must be compiled as "./hsh" to run these tests.
+
+# TEMPLATE
+# echo "==========[sh]==========" <- denotes test with actual shell
+# echo "ls" | sh
+# echo
+# echo "==========[hsh]==========" <- denotes test with student shell
+# echo "ls" | [your_compiled_shell_executable]
+# echo
+
+# PATH handling tests
+
+echo "--------------------------------------------"
+echo "----------- NON-INTERACTIVE MODE -----------"
+echo "--------------------------------------------"
+echo
+echo "TEST: \"bin/ls\""
+echo "==========[sh]=========="
+echo "/bin/ls" | sh
+echo
+echo "==========[hsh]========="
+echo "/bin/ls" | ./hsh
+echo
+echo --------------------------------------------
+echo "TEST: Three lines of \"pwd\""
+echo "==========[sh]=========="
+echo "pwd
+pwd
+pwd" | sh
+echo
+echo "==========[hsh]========="
+echo "pwd
+pwd
+pwd" | ./hsh
+echo
+echo --------------------------------------------
+echo "TEST: Trailing spaces \"ls    \", etc"
+echo "==========[sh]=========="
+echo "ls    " | sh
+echo
+echo "==========[hsh]========="
+echo "ls    " | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: Leading spaces \"    ls\""
+echo "==========[sh]=========="
+echo "    ls" | sh
+echo
+echo "==========[hsh]========="
+echo "    ls" | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: Multiple lines and spaces"
+echo "==========[sh]=========="
+echo "     ls
+     pwd     
+ls -a
+  lspwd" | sh
+echo
+echo "==========[hsh]========="
+echo "     ls
+     pwd     
+ls -a
+  lspwd" | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: PATH and multiple lines/spaces"
+echo "==========[sh]=========="
+echo "
+   ls /home 
+
+pwd    
+    /bin/ls       -l
+echo phew" | sh
+echo
+echo "==========[hsh]========="
+echo "
+   ls /home 
+
+pwd    
+    /bin/ls       -l
+echo phew" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "--------------- END OF TEST ----------------"
+echo "--------------------------------------------"
