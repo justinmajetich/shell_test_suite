@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# Use these templates to format your test file.
+# Your shell must be compiled as "./hsh" to run these tests.
+
+# TEMPLATE
+# echo "==========[sh]==========" <- denotes test with actual shell
+# echo "ls" | sh
+# echo
+# echo "==========[hsh]==========" <- denotes test with student shell
+# echo "ls" | [your_compiled_shell_executable]
+# echo
+
+# PATH handling tests
+
+echo "--------------------------------------------"
+echo "----------- NON-INTERACTIVE MODE -----------"
+echo "--------------------------------------------"
+echo
+echo "TEST: \"bin/env\""
+echo "==========[sh]=========="
+echo "/bin/env" | sh
+echo
+echo "==========[hsh]========="
+echo "/bin/env" | ./hsh
+echo
+echo "--------------------------------------------"
+echo "TEST: Three lines of \"env\""
+echo "==========[sh]=========="
+echo "env
+env
+env" | sh
+echo
+echo "==========[hsh]========="
+echo "env
+env
+env" | ./hsh
+echo
+echo "--------------------------------------------"
+echo "TEST: Trailing spaces \"env    \", etc"
+echo "==========[sh]=========="
+echo "env    " | sh
+echo
+echo "==========[hsh]========="
+echo "env    " | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "TEST: Leading spaces \"    env\""
+echo "==========[sh]=========="
+echo "    env" | sh
+echo
+echo "==========[hsh]========="
+echo "    env" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "TEST: Multiple lines and spaces"
+echo "==========[sh]=========="
+echo "     env
+     ls     
+ls -l
+  lsenv" | sh
+echo
+echo "==========[hsh]========="
+echo "     env
+     ls     
+ls -l
+  lsenv" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "TEST: Set env for IDE"
+echo "==========[sh]=========="
+echo "env DISPLAY=gnu:0 LOGNAME=foo vim" | sh
+echo
+echo "==========[hsh]========="
+echo "env DISPLAY=gnu:0 LOGNAME=foo vim" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "--------------- END OF TEST ----------------"
+echo "--------------------------------------------"
