@@ -17,12 +17,12 @@ echo "--------------------------------------------"
 echo "------- WRITE CUSTOM GETLINE [TASK 4] ------"
 echo "--------------------------------------------"
 echo
-echo "TEST: \"/bin/ls\""
-echo "==========[sh]=========="
-echo "/bin/ls" | sh | $LTRACE -bco $LTRACEOUTPUTFILE $SHELL > $OUTPUTFILE | grep getline
+echo "TEST: no getline function was used"
+echo "==============[sh]==============="
+echo strace -c -o output.txt /sh | cat output.txt | grep getline
 echo
-echo "==========[hsh]========="
-echo "/bin/ls" | ./hsh | $LTRACE -bco $LTRACEOUTPUTFILE $SHELL > $OUTPUTFILE | grep getline
+echo "==============[hsh]=============="
+echo strace -c -o output.txt ./hsh | cat output.txt | grep getline
 echo
 echo --------------------------------------------
 echo
