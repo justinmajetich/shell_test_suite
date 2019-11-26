@@ -11,18 +11,18 @@
 # echo "ls" | [your_compiled_shell_executable]
 # echo
 
-# getline handling tests
+# strtok handling tests
 
 echo "--------------------------------------------"
-echo "------- WRITE CUSTOM GETLINE [TASK 4] ------"
+echo "------- WRITE CUSTOM STRTOK [TASK 6] ------"
 echo "--------------------------------------------"
 echo
-echo "TEST: no getline function was used"
+echo "TEST: no strtok function was used"
 echo "==============[sh]==============="
-echo strace -c -o output.txt /sh | cat output.txt | grep getline
+echo strace -c -o output.txt /sh | cat output.txt | grep strtok
 echo
 echo "==============[hsh]=============="
-echo strace -c -o output.txt ./hsh | cat output.txt | grep getline
+echo strace -c -o output.txt ./hsh | cat output.txt | grep strtok
 echo
 echo --------------------------------------------
 echo
