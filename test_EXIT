@@ -11,7 +11,7 @@
 # echo "ls" | [your_compiled_shell_executable]
 # echo
 
-# PATH handling tests
+# EXIT handling tests
 
 echo "--------------------------------------------"
 echo "----------- NON-INTERACTIVE MODE -----------"
