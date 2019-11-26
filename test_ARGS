@@ -28,6 +28,7 @@ echo --------------------------------------------
 echo "TEST: mkdir test_dir"
 echo "==========[sh]=========="
 echo "mkdir test_dir" | sh
+rm -r test_dir
 echo
 echo "==========[hsh]========="
 echo "mkdir test_dir" | ./hsh
