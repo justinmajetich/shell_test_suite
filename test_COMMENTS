@@ -1,8 +1,6 @@
 #!/bin/bash
-
 # Use these templates to format your test file.
 # Your shell must be compiled as "./hsh" to run these tests.
-
 # TEMPLATE
 # echo "==========[sh]==========" <- denotes test with actual shell
 # echo "ls" | sh
@@ -10,22 +8,26 @@
 # echo "==========[hsh]==========" <- denotes test with student shell
 # echo "ls" | [your_compiled_shell_executable]
 # echo
-
-# getline handling tests
+# Command handling tests
 
 echo "--------------------------------------------"
-echo "------- WRITE CUSTOM GETLINE [TASK 4] ------"
+echo "----------- NON-INTERACTIVE MODE -----------"
 echo "--------------------------------------------"
 echo
-echo "TEST: no getline function was used"
-echo "==============[sh]==============="
-echo strace -c -o output.txt /sh | cat output.txt | grep getline
+echo "TEST: Regular \"ls #a message\""
+echo "==========[sh]=========="
+echo "pwd # ls -la " | sh
 echo
-echo "==============[hsh]=============="
-echo strace -c -o output.txt ./hsh | cat output.txt | grep getline
+echo "==========[hsh]========="
+echo "pwd # ls -la" | ./hsh
 echo
 echo --------------------------------------------
+echo "TEST: Trailing spaces \"date                     # pwd\""
+echo "==========[sh]=========="
+echo "date                     # pwd" | sh
 echo
+echo "==========[hsh]========="
+echo "date                     # pwd" | ./hsh
 echo
 echo "--------------------------------------------"
 echo "--------------- END OF TEST ----------------"
