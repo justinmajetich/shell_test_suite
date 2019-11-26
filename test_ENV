@@ -11,52 +11,71 @@
 # echo "ls" | [your_compiled_shell_executable]
 # echo
 
-# EXIT handling tests
+# PATH handling tests
 
 echo "--------------------------------------------"
 echo "----------- NON-INTERACTIVE MODE -----------"
 echo "--------------------------------------------"
 echo
-echo "TEST: Regular \"exit\""
+echo "TEST: \"bin/env\""
 echo "==========[sh]=========="
-echo "exit" | sh
+echo "/bin/env" | sh
 echo
 echo "==========[hsh]========="
-echo "exit" | ./hsh
+echo "/bin/env" | ./hsh
 echo
-echo --------------------------------------------
-echo "TEST: Trailing spaces \"exit    \""
+echo "--------------------------------------------"
+echo "TEST: Three lines of \"env\""
 echo "==========[sh]=========="
-echo "exit    " | sh
+echo "env
+env
+env" | sh
 echo
 echo "==========[hsh]========="
-echo "exit    " | ./hsh
+echo "env
+env
+env" | ./hsh
 echo
-echo --------------------------------------------
-echo "TEST: Leading spaces \"    exit\""
+echo "--------------------------------------------"
+echo "TEST: Trailing spaces \"env    \", etc"
 echo "==========[sh]=========="
-echo "    exit" | sh
+echo "env    " | sh
 echo
 echo "==========[hsh]========="
-echo "    exit" | ./hsh
+echo "env    " | ./hsh
 echo
 echo
-echo --------------------------------------------
-echo "TEST: Leading and trailing tabs \"\texit\t\""
+echo "--------------------------------------------"
+echo "TEST: Leading spaces \"    env\""
 echo "==========[sh]=========="
-echo "\texit\t" | sh
+echo "    env" | sh
 echo
 echo "==========[hsh]========="
-echo "\texit\t" | ./hsh
+echo "    env" | ./hsh
 echo
 echo
-echo --------------------------------------------
-echo "TEST: Multiple spaces and tabs \"\t   \t\t exit  \t\t  \t \""
+echo "--------------------------------------------"
+echo "TEST: Multiple lines and spaces"
 echo "==========[sh]=========="
-echo "\t   \t\t exit  \t\t  \t \"" | sh
+echo "     env
+     ls     
+ls -l
+  lsenv" | sh
 echo
 echo "==========[hsh]========="
-echo "\t   \t\t exit  \t\t  \t \"" | ./hsh
+echo "     env
+     ls     
+ls -l
+  lsenv" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "TEST: Set env for IDE"
+echo "==========[sh]=========="
+echo "env DISPLAY=gnu:0 LOGNAME=foo vim" | sh
+echo
+echo "==========[hsh]========="
+echo "env DISPLAY=gnu:0 LOGNAME=foo vim" | ./hsh
 echo
 echo
 echo "--------------------------------------------"
