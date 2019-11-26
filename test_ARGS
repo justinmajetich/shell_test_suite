@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Use these templates to format your test file.
+# Your shell must be compiled as "./hsh" to run these tests.
+
+# TEMPLATE
+# echo "==========[sh]==========" <- denotes test with actual shell
+# echo "ls" | sh
+# echo
+# echo "==========[hsh]==========" <- denotes test with student shell
+# echo "ls" | [your_compiled_shell_executable]
+# echo
+
+# COMMAND LINE ARGUMENTS handling tests
+
+echo "--------------------------------------------"
+echo "--------- COMMAND LINE ARGUMENTS [TASK 5] --------"
+echo "--------------------------------------------"
+echo
+echo "TEST: ls -l"
+echo "==========[sh]=========="
+echo "ls -l" | sh
+echo
+echo "==========[hsh]========="
+echo "ls -l" | ./hsh
+echo
+echo --------------------------------------------
+echo "TEST: mkdir test_dir"
+echo "==========[sh]=========="
+echo "mkdir test_dir" | sh
+echo
+echo "==========[hsh]========="
+echo "mkdir test_dir" | ./hsh
+echo
+echo "ls" | sh
+echo
+echo --------------------------------------------
+echo "TEST: touch file_name"
+echo "==========[sh]=========="
+echo "touch file_name" | sh
+echo
+echo "==========[hsh]========="
+echo "touch file_name" | ./hsh
+echo
+echo "ls" | sh
+echo
+echo --------------------------------------------
+echo "TEST: cp file_name FILE_NAME"
+echo "==========[sh]=========="
+echo "cp file_name FILE_NAME" | sh
+echo
+echo "==========[hsh]========="
+echo "cp file_name FILE_NAME" | ./hsh
+echo
+echo
+echo "ls" | sh
+echo
+echo
+echo --------------------------------------------
+echo "rm file_name" | sh
+echo "rm FILE_NAME" | sh
+echo "rm -r test_dir" | sh
+echo
+echo "ls" | sh
+echo
+echo "--------------------------------------------"
+echo "--------------- END OF TEST ----------------"
+echo "--------------------------------------------"

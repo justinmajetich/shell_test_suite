@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Use these templates to format your test file.
+# Your shell must be compiled as "./hsh" to run these tests.
+
+# TEMPLATE
+# echo "==========[sh]==========" <- denotes test with actual shell
+# echo "ls" | sh
+# echo
+# echo "==========[hsh]==========" <- denotes test with student shell
+# echo "ls" | [your_compiled_shell_executable]
+# echo
+
+# ALIAS handling tests
+
+echo "--------------------------------------------"
+echo "---------ALIAS TESTS - HBTNNHV 0919---------"
+echo "--------------------------------------------"
+echo
+echo "TEST: alias to listing""
+echo "==========[sh]=========="
+echo "alias l="ls"" | sh
+echo
+echo "==========[hsh]========="
+echo "alias l="ls"" | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: alias to git add""
+echo "==========[sh]=========="
+echo "alias yes_please="git add"" | sh
+echo
+echo "==========[hsh]========="
+echo "alias yes_please="git add"" | ./hsh
+echo
+echo --------------------------------------------
+echo "TEST: alias to print current directory""
+echo "==========[sh]=========="
+echo "alias where_am_i="pwd"" | sh
+echo
+echo "==========[hsh]========="
+echo "alias where_am_i="pwd"" | ./hsh
+echo
+echo --------------------------------------------
+echo "TEST: Users & Homes S E Devops 0x02 - num 22""
+echo "==========[sh]=========="
+echo "alias who_are_you="cut -f 1,6 -d: /etc/passwd | sort"" | sh
+echo
+echo "==========[hsh]========="
+echo "alias who_are_you="cut -f 1,6 -d: /etc/passwd | sort"" | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: alias to parent directory""
+echo "==========[sh]=========="
+echo "alias mama="cd .."" | sh
+echo
+echo "==========[hsh]========="
+echo "alias mama="cd .."" | ./hsh
+echo
+echo
+echo --------------------------------------------
+echo "TEST: Empty Casks S E Devops 0x02 - num 100""
+echo "==========[sh]=========="
+echo "alias empty_casks="ls -a | find ./ -empty -printf "%f\n"" | sh
+echo
+echo "==========[hsh]========="
+echo "alias empty_casks="ls -a | find ./ -empty -printf "%f\n"" | ./hsh
+echo
+echo
+echo "--------------------------------------------"
+echo "--------------- END OF TEST ----------------"
+echo "--------------------------------------------"
